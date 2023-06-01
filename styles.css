@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Aktiv+Grotesk&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Aktiv Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111111;
+    height: 2000px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    z-index: 1000;
+}
+
+.header-content {
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.language-buttons {
+    color: #f1f1f1;
+    display: flex;
+    gap: 10px;
+}
+
+.language-buttons button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+}
+
+.language-buttons button.active {
+    color: #f1f1f1;
+}
+
+.menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #f1f1f1;
+    border: none;
+    z-index: 999;
+    transition: all 1s;
+}
+
+.color-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #f1f1f1;
+    z-index: 999;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: background-color 2s;
+}
+
+.overlay-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.overlay-buttons button {
+    background-color: transparent;
+    border: none;
+    color: #111111;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.bt-preto {
+    background-color: #111111;
+}
+
+.hero {
+    width: 1140px;
+    height: 480px;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 28px;
+    color: #f1f1f1;
+}
+
+.hero .headline {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+.hero .subheadline {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
+
+.projects {
+    width: 1140px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 35px;
+    color: #f1f1f1;
+}
+
+.projects .project-title {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+
+.projects .project-image {
+    width: 100%;
+    height: 375px;
+    background: url('https://via.placeholder.com/1140x785') no-repeat center/cover;
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    height: 375px;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.project-tags,
+.project-name,
+.project-description,
+.project-button {
+    display: none;
+    position: absolute;
+    color: #111111;
+    font-size: 30px;
+    left: 30px; /* All texts are 30px away from the left side of the div */
+    z-index: 2;
+    font-family: 'Aktiv Grotesk', sans-serif;
+    
+}
+
+.project-tags {
+    top: 30px; /* Tags are 30px away from the top */
+    font-size: 15px;
+}
+
+.project-name {
+    top: 60px; /* 10px below the tags (30px for tags top + 15px for tags font size + 5px for gap) */
+    font-size: 40px;
+    font-weight: 500;
+
+}
+
+.project-description {
+    top: 110px; /* 30px below the name (50px for name top + 30px for name font size + 15px for gap) */
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.project-button {
+    top: 300px; 
+    font-size: 25px;
+}
