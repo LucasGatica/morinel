@@ -1,4 +1,3 @@
-/* CSS Reset */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
@@ -54,6 +53,36 @@ table {
 }
 
 /* ... (restante do CSS reset e outras regras) ... */
+/* ... (CSS Reset e outras regras como anteriormente) ... */
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input-container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    visibility: hidden;
+    font-size: 80px;
+    padding: 0;
+}
+
+.input-container input {
+    font-size: 70px;
+    background: none;
+    border: none;
+    outline: none;
+    height: 40px;
+    box-shadow: none;
+    padding: 0;
+    vertical-align: middle;
+    margin: 0;
+}
+
+/* ... (resto do seu CSS como anteriormente) ... */
 
 /* ... (restante do CSS reset) ... */
 
@@ -67,28 +96,32 @@ table {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Alinha os itens ao topo */
     font-size: 40px;
+    gap: 10px; /* Espaço entre os itens */
 }
 
-#contactForm input, #contactForm textarea {
+
+#contactForm input, #contactForm textarea, .uminput {
     margin: 0; /* Remove margens */
     border: none;
-    width: 100px;
-    height: 40px; /* Ajusta a altura */
+    width: 162px;
+    height: 60px;
     box-shadow: none;
     outline: none;
-    vertical-align: top;
+    vertical-align: middle; /* Ajusta o alinhamento vertical */
     padding: 0; /* Remove padding padrão */
 }
 
 #contactForm p {
-    height: 40px;
+    height: 60px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0;z /* Adiciona uma pequena margem horizontal para separação */
+    font-size: 70px;
+    margin: 0; /* Remove a margem */
+    display: flex; /* Ajusta o alinhamento vertical */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
 }
 
 #contactForm button, #contactForm input[type="submit"] {
@@ -99,8 +132,20 @@ table {
     padding: 5px 10px;
 }
 
+#contactForm input{
+    font-size: 70px;
+}
 #contactForm ::placeholder { 
     color: gray;
     opacity: 1;
-    font-size: 40px;
+    font-size: 70px;
+    
+}
+
+h2{
+    font-size: 70px;
+}
+
+.inputgrande{
+    width: 200px;
 }
