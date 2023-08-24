@@ -18,6 +18,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
+    
     font: inherit;
     vertical-align: baseline;
     font-family: 'Roboto', sans-serif;
@@ -70,17 +71,7 @@ table {
     padding: 0;
 }
 
-.input-container input {
-    font-size: 70px;
-    background: none;
-    border: none;
-    outline: none;
-    height: 40px;
-    box-shadow: none;
-    padding: 0;
-    vertical-align: middle;
-    margin: 0;
-}
+
 
 /* ... (resto do seu CSS como anteriormente) ... */
 
@@ -102,19 +93,20 @@ table {
 }
 
 
-#contactForm input, #contactForm textarea, .uminput {
-    margin: 0; /* Remove margens */
+ #contactForm textarea, .uminput {
+   margin: 0; /* Remove margens */
     border: none;
     width: 162px;
-    height: 60px;
+    height: 80px;
     box-shadow: none;
     outline: none;
     vertical-align: middle; /* Ajusta o alinhamento vertical */
     padding: 0; /* Remove padding padrão */
+    
 }
 
 #contactForm p {
-    height: 60px;
+    height: 80px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -148,4 +140,34 @@ h2{
 
 .inputgrande{
     width: 200px;
+}
+
+.grande{
+    
+    width: 352px;
+
+}
+
+.medio{
+    width: 260px;
+}
+.pequeno{
+    width: 185px;
+}
+
+#contactForm select {
+    font-size: 60px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    height: 80px;
+    background: none;  /* Define o fundo como transparente */
+    vertical-align: middle;
+    margin: 0;
+    color: grey;  /* Cor do texto */
+    appearance: none;  /* Remove estilos padrão em alguns navegadores */
+    -webkit-appearance: none;  /* Remove estilos padrão no Safari e Chrome */
+    -moz-appearance: none;  /* Remove estilos padrão no Firefox */
+    cursor: pointer;
 }
